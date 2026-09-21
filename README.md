@@ -350,8 +350,6 @@ how to fix it, please visit the webpage mentioned above.
 ```
 #  Частина B. Власна модель рівнів
 ### Кількість виділених груп: 5
-## Частина B. Побудова власної моделі рівнів
-
 | № | Назва групи (власне формулювання) | Рядки виводу, віднесені до групи | Обґрунтування |
 |---|---|---|---|
 | 1 | Команда, яку ввела людина | `curl -v https://example.net`<br><br>`curl -v http://neverssl.com`<br><br>`Resolve-DnsName example.net`<br><br>`curl -v https://google.com`<br><br>`curl -v https://expired.badssl.com`<br><br>`curl -v https://wrong.host.badssl.com`<br><br>`curl -v https://self-signed.badssl.com` | Це єдині рядки, які людина набрала сама. Усе інше у виводах з'явилося через ці команди. Тому ця група найближча до користувача. |
