@@ -218,126 +218,33 @@ C:\Users\Дар'я>curl -v http://neverssl.com
 ```
 ## A.3. Запит до служби доменних імен
 ### Команда (перше виконання):
-> nslookup -debug example.net
+> Resolve-DnsName example.net
 ### Вивід:
 ```console 
-C:\Users\Дар'я>nslookup -debug example.net
-------------
-Got answer:
-    HEADER:
-        opcode = QUERY, id = 1, rcode = NXDOMAIN
-        header flags:  response, want recursion
-        questions = 1,  answers = 0,  authority records = 0,  additional = 0
+PS C:\WINDOWS\system32> Resolve-DnsName example.net
 
-    QUESTIONS:
-        1.3.168.192.in-addr.arpa, type = PTR, class = IN
-
-------------
-Server:  UnKnown
-Address:  192.168.3.1
-
-------------
-Got answer:
-    HEADER:
-        opcode = QUERY, id = 2, rcode = NOERROR
-        header flags:  response, want recursion, recursion avail.
-        questions = 1,  answers = 2,  authority records = 0,  additional = 0
-
-    QUESTIONS:
-        example.net, type = A, class = IN
-    ANSWERS:
-    ->  example.net
-        internet address = 172.66.175.59
-        ttl = 300 (5 mins)
-    ->  example.net
-        internet address = 104.20.21.8
-        ttl = 300 (5 mins)
-
-------------
-Non-authoritative answer:
-------------
-Got answer:
-    HEADER:
-        opcode = QUERY, id = 3, rcode = NOERROR
-        header flags:  response, want recursion, recursion avail.
-        questions = 1,  answers = 2,  authority records = 0,  additional = 0
-
-    QUESTIONS:
-        example.net, type = AAAA, class = IN
-    ANSWERS:
-    ->  example.net
-        AAAA IPv6 address = 2606:4700:10::ac42:af3b
-        ttl = 300 (5 mins)
-    ->  example.net
-        AAAA IPv6 address = 2606:4700:10::6814:1508
-        ttl = 300 (5 mins)
-
-------------
-Name:    example.net
-Addresses:  2606:4700:10::ac42:af3b
-          2606:4700:10::6814:1508
-          172.66.175.59
-          104.20.21.8
+Name                                           Type   TTL   Section    IPAddress
+----                                           ----   ---   -------    ---------
+example.net                                    AAAA   300   Answer     2606:4700:10::ac42:af3b
+example.net                                    AAAA   300   Answer     2606:4700:10::6814:1508
+example.net                                    A      300   Answer     172.66.175.59
+example.net                                    A      300   Answer     104.20.21.8
 ```
 ### Команда (повторне виконання через 5–7 хвилин):
-> nslookup -debug example.net
+> Resolve-DnsName example.net
 ### Вивід:
 ```console
-C:\Users\Дар'я>nslookup -debug example.net
-------------
-Got answer:
-    HEADER:
-        opcode = QUERY, id = 1, rcode = NXDOMAIN
-        header flags:  response, want recursion
-        questions = 1,  answers = 0,  authority records = 0,  additional = 0
+PS C:\WINDOWS\system32> Resolve-DnsName example.net
 
-    QUESTIONS:
-        1.3.168.192.in-addr.arpa, type = PTR, class = IN
-
-------------
-Server:  UnKnown
-Address:  192.168.3.1
-
-------------
-Got answer:
-    HEADER:
-        opcode = QUERY, id = 2, rcode = NOERROR
-        header flags:  response, want recursion, recursion avail.
-        questions = 1,  answers = 2,  authority records = 0,  additional = 0
-
-    QUESTIONS:
-        example.net, type = A, class = IN
-    ANSWERS:
-    ->  example.net
-        internet address = 104.20.21.8
-        ttl = 300 (5 mins)
-    ->  example.net
-        internet address = 172.66.175.59
-        ttl = 300 (5 mins)
-
-------------
-Non-authoritative answer:
-------------
-Got answer:
-    HEADER:
-        opcode = QUERY, id = 3, rcode = NOERROR
-        header flags:  response, want recursion, recursion avail.
-        questions = 1,  answers = 2,  authority records = 0,  additional = 0
-
-    QUESTIONS:
-        example.net, type = AAAA, class = IN
-    ANSWERS:
-    ->  example.net
-        AAAA IPv6 address = 2606:4700:10::6814:1508
-        ttl = 300 (5 mins)
-    ->  example.net
-        AAAA IPv6 address = 2606:4700:10::ac42:af3b
-        ttl = 300 (5 mins)
-
-------------
-Name:    example.net
-Addresses:  2606:4700:10::6814:1508
-          2606:4700:10::ac42:af3b
-          104.20.21.8
-          172.66.175.59
+Name                                           Type   TTL   Section    IPAddress
+----                                           ----   ---   -------    ---------
+example.net                                    AAAA   254   Answer     2606:4700:10::ac42:af3b
+example.net                                    AAAA   254   Answer     2606:4700:10::6814:1508
+example.net                                    A      254   Answer     172.66.175.59
+example.net                                    A      254   Answer     104.20.21.8
 ```
+| Параметр | Перше виконання | Повторне виконання |
+|---|---|---|
+| Час виконання (год:хв) | 12:54 | 12:56 |
+| IP-адреса |  104.20.21.8| 104.20.21.8 |
+| Значення TTL | 300 | 254 |
