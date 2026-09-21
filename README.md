@@ -14,7 +14,7 @@
 ## Частина A. Збір експериментальних даних
 ### A.1. Запит із діагностичним виводом
 ### Команда:
-curl -v https://example.net
+> curl -v https://example.net
 ### Вивід:
 C:\Users\Дар'я>curl -v https://example.net
 * Host example.net:443 was resolved.
