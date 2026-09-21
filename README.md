@@ -281,7 +281,7 @@ Addresses:  2606:4700:10::ac42:af3b
 ```
 ### Команда (повторне виконання через 5–7 хвилин):
 > nslookup -debug example.net
-Вивід:
+### Вивід:
 ```console
 C:\Users\Дар'я>nslookup -debug example.net
 ------------
