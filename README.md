@@ -16,6 +16,9 @@
 ### Команда:
 > curl -v https://example.net
 ### Вивід:
+git status
+git add
+git commit
 C:\Users\Дар'я>curl -v https://example.net
 * Host example.net:443 was resolved.
 * IPv6: (none)
