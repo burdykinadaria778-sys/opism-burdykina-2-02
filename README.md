@@ -13,9 +13,9 @@
 | **Дата виконання** | 21.09.2026 |
 ## Частина A. Збір експериментальних даних
 ### A.1. Запит із діагностичним виводом
-Команда:
+### Команда:
 curl -v https://example.net
-Вивід:
+### Вивід:
 C:\Users\Дар'я>curl -v https://example.net
 * Host example.net:443 was resolved.
 * IPv6: (none)
