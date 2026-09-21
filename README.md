@@ -348,3 +348,5 @@ curl failed to verify the legitimacy of the server and therefore could not
 establish a secure connection to it. To learn more about this situation and
 how to fix it, please visit the webpage mentioned above.
 ```
+#  Частина B. Власна модель рівнів
+### Кількість виділених груп: ___
