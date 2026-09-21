@@ -14,7 +14,7 @@
 # Частина A. Збір експериментальних даних
 ## A.1. Запит із діагностичним виводом
 ### Команда:
-< curl -v https://ВАШ_ДОМЕН
+> curl -v https://ВАШ_ДОМЕН
 ### Вивід:
 ```console 
 C:\Users\Дар'я>curl -v https://example.net
@@ -55,5 +55,5 @@ C:\Users\Дар'я>curl -v https://example.net
 ```
 ## A.2. Запит без захисту з'єднання
 ### Команда:
-< curl -v http://neverssl.com
+> curl -v http://neverssl.com
 ### Вивід:
